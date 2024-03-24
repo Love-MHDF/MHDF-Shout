@@ -5,6 +5,7 @@ cn\chengzhiya\mhdfshout\main.class
 cn\chengzhiya\mhdfshout\Listeners\SendShoutMessage.class
 cn\chengzhiya\mhdfshout\Listeners\QuitCancel.class
 cn\chengzhiya\mhdfshout\Commands\AdminShout.class
+cn\chengzhiya\mhdfshout\Commands\ShoutReload.class
 cn\chengzhiya\mhdfshout\Listeners\BungeeCordHook.class
 cn\chengzhiya\mhdfshout\Shout.class
 cn\chengzhiya\mhdfshout\Util.class

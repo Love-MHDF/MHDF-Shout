@@ -1,6 +1,7 @@
 package cn.chengzhiya.mhdfshout;
 
 import cn.chengzhiya.mhdfshout.Commands.AdminShout;
+import cn.chengzhiya.mhdfshout.Commands.ShoutReload;
 import cn.chengzhiya.mhdfshout.Listeners.*;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -39,6 +40,8 @@ public final class main extends JavaPlugin {
         for (String Commands : getConfig().getStringList("HornSettings.AdminShout.Commands")) {
             registerCommand(this, new AdminShout(), "管理喊话", Commands);
         }
+
+        registerCommand(this, new ShoutReload(), "重载配置", "shoutreload");
 
         getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
         getServer().getMessenger().registerIncomingPluginChannel(this, "BungeeCord", new BungeeCordHook());

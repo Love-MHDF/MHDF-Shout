@@ -77,10 +77,10 @@ public final class BungeeCordHook implements PluginMessageListener {
     public void SendShout() {
         Shout Shout = ShoutList.get(0);
 
-        BossBar NullBossBar = BossBar.bossBar(Component.text(""), 1f, Shout.getBossBarColor(), BossBar.Overlay.PROGRESS);
-        BossBar ShoutBossBar = BossBar.bossBar(Component.text(Shout.getMessage()), 1f, Shout.getBossBarColor(), BossBar.Overlay.PROGRESS);
-
         for (Player OnlinePlayer : Bukkit.getOnlinePlayers()) {
+            BossBar NullBossBar = BossBar.bossBar(Component.text(""), 1f, Shout.getBossBarColor(), BossBar.Overlay.PROGRESS);
+            BossBar ShoutBossBar = BossBar.bossBar(Component.text(Shout.getMessage()), 1f, Shout.getBossBarColor(), BossBar.Overlay.PROGRESS);
+
             OnlinePlayer.showBossBar(NullBossBar);
             OnlinePlayer.showBossBar(ShoutBossBar);
 
