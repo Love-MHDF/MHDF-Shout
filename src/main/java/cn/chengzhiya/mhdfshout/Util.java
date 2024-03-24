@@ -70,14 +70,11 @@ public final class Util {
         return ChatColor(Lang.getString(Value));
     }
 
-    public static void SendShout(Player player, String BossBarColor, String Message, String Sound, int ShowItem) {
-        if (main.main.getConfig().getBoolean("ShoutSettings.Color")) {
-            Message = ChatColor(Message);
-        }
-
+    public static void SendShout(Player player, String BossBarColor, String BossBarBackground, String Message, String Sound, int ShowItem) {
         ByteArrayDataOutput out = ByteStreams.newDataOutput();
         out.writeUTF("SendShout");
         out.writeUTF(BossBarColor);
+        out.writeUTF(BossBarBackground);
         out.writeUTF(Message);
         out.writeUTF(Sound);
         out.writeInt(ShowItem);
@@ -85,12 +82,11 @@ public final class Util {
         player.sendPluginMessage(main.main, "BungeeCord", out.toByteArray());
     }
 
-    public static void SendAdminShout(Player player, String BossBarColor, String Message, String Sound, int ShowItem) {
-        Message = ChatColor(Message);
-
+    public static void SendAdminShout(Player player, String BossBarColor, String BossBarBackground, String Message, String Sound, int ShowItem) {
         ByteArrayDataOutput out = ByteStreams.newDataOutput();
         out.writeUTF("SendAdminShout");
         out.writeUTF(BossBarColor);
+        out.writeUTF(BossBarBackground);
         out.writeUTF(Message);
         out.writeUTF(Sound);
         out.writeInt(ShowItem);

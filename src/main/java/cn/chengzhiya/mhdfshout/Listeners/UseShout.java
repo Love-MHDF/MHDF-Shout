@@ -25,13 +25,13 @@ public final class UseShout implements Listener {
                         String MythicType = ItemNBT.getCompound("tag").getString("MYTHIC_TYPE");
                         if (main.main.getConfig().getString("HornSettings." + MythicType + ".MessageFormat") != null) {
                             Player player = event.getPlayer();
-                            if (main.main.getConfig().getInt("ShoutSettings.Delay") >= 0 && !player.hasPermission("MHDFShout.Bypass.Delay")) {
+                            if (main.main.getConfig().getInt("HornSettings." + MythicType + ".Delay") >= 0 && !player.hasPermission("MHDFShout.Bypass.Delay")) {
                                 getDelayTime(player);
                                 if (getShoutDelayTimeHashMap().get(player.getName()) != null) {
                                     player.sendMessage(i18n("Delay").replaceAll("\\{Delay\\}", String.valueOf(getShoutDelayTimeHashMap().get(player.getName()))));
                                     return;
                                 }
-                                setDelayTime(player, main.main.getConfig().getInt("ShoutSettings.Delay"));
+                                setDelayTime(player, main.main.getConfig().getInt("HornSettings." + MythicType + ".Delay"));
                             }
                             player.sendMessage(i18n("InputMessage").replaceAll("\\{Exit\\}", Objects.requireNonNull(main.main.getConfig().getString("InputSettings.ExitMessage"))));
                             getShoutHashMap().put(player.getName(), MythicType);

@@ -13,6 +13,7 @@ import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.io.IOException;
 
+import static cn.chengzhiya.mhdfpluginapi.Util.*;
 import static cn.chengzhiya.mhdfshout.Util.*;
 
 public final class BungeeCordHook implements PluginMessageListener {
@@ -27,11 +28,12 @@ public final class BungeeCordHook implements PluginMessageListener {
             String subchannel = in.readUTF();
             if (subchannel.equals("SendShout")) {
                 String Color = in.readUTF();
+                String Background = in.readUTF();
                 String Message = in.readUTF();
                 String Sound = in.readUTF();
                 int ShowTime = in.readInt();
 
-                ShoutList.add(new Shout(BossBar.Color.valueOf(Color), Message, Sound, ShowTime));
+                ShoutList.add(new Shout(BossBar.Color.valueOf(Color), Background, Message, Sound, ShowTime));
 
                 if (ShoutList.size() == 1) {
                     SendShout();
@@ -39,26 +41,28 @@ public final class BungeeCordHook implements PluginMessageListener {
             }
             if (subchannel.equals("SendAdminShout")) {
                 String Color = in.readUTF();
+                String Background = in.readUTF();
                 String Message = in.readUTF();
                 String[] Sound = in.readUTF().split("\\|");
                 int ShowTime = in.readInt();
 
-                BossBar ShoutBossBar = BossBar.bossBar(Component.text(Message), 1f, BossBar.Color.valueOf(Color), BossBar.Overlay.PROGRESS);
-                BossBar NullBossBar = BossBar.bossBar(Component.text(""), 1f, BossBar.Color.valueOf(Color), BossBar.Overlay.PROGRESS);
                 for (Player OnlinePlayer : Bukkit.getOnlinePlayers()) {
+                    BossBar NullBossBar = BossBar.bossBar(Component.text(ChatColor(Background)), 1f, BossBar.Color.valueOf(Color), BossBar.Overlay.PROGRESS);
+                    BossBar ShoutBossBar = BossBar.bossBar(Component.text(Message), 1f, BossBar.Color.valueOf(Color), BossBar.Overlay.PROGRESS);
+
                     OnlinePlayer.showBossBar(NullBossBar);
                     OnlinePlayer.showBossBar(ShoutBossBar);
-
-                    Bukkit.getScheduler().runTaskLaterAsynchronously(main.main, () -> {
-                        OnlinePlayer.hideBossBar(NullBossBar);
-                        OnlinePlayer.hideBossBar(ShoutBossBar);
-                    }, 20L * ShowTime);
 
                     try {
                         OnlinePlayer.playSound(OnlinePlayer, org.bukkit.Sound.valueOf(Sound[0]), Float.parseFloat(Sound[1]), Float.parseFloat(Sound[2]));
                     } catch (Exception e) {
                         OnlinePlayer.playSound(OnlinePlayer, Sound[0], Float.parseFloat(Sound[1]), Float.parseFloat(Sound[2]));
                     }
+
+                    Bukkit.getScheduler().runTaskLaterAsynchronously(main.main, () -> {
+                        OnlinePlayer.hideBossBar(NullBossBar);
+                        OnlinePlayer.hideBossBar(ShoutBossBar);
+                    }, 20L * ShowTime);
                 }
             }
             if (subchannel.equals("GetDelayTime")) {
@@ -78,7 +82,7 @@ public final class BungeeCordHook implements PluginMessageListener {
         Shout Shout = ShoutList.get(0);
 
         for (Player OnlinePlayer : Bukkit.getOnlinePlayers()) {
-            BossBar NullBossBar = BossBar.bossBar(Component.text(""), 1f, Shout.getBossBarColor(), BossBar.Overlay.PROGRESS);
+            BossBar NullBossBar = BossBar.bossBar(Component.text(ChatColor(Shout.getBossBarBackground())), 1f, Shout.getBossBarColor(), BossBar.Overlay.PROGRESS);
             BossBar ShoutBossBar = BossBar.bossBar(Component.text(Shout.getMessage()), 1f, Shout.getBossBarColor(), BossBar.Overlay.PROGRESS);
 
             OnlinePlayer.showBossBar(NullBossBar);

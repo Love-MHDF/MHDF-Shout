@@ -4,6 +4,14 @@ HornSettings:
   超级傻逼之剑:
     #移除物品
     TakeItem: true
+    #解析颜色符号
+    Color: true
+    #空行文本内容
+    NullBossBarMessage: ""
+    #冷却 (-1关闭)
+    Delay: 5
+    #字数限制 (-1关闭)
+    MaxLength: 20
     #显示时长
     ShowTime: 15
     #Boss血条颜色
@@ -17,6 +25,14 @@ HornSettings:
     #命令
     Commands:
       - "adminshout"
+    #解析颜色符号
+    Color: true
+    #空行文本内容
+    NullBossBarMessage: ""
+    #冷却 (-1关闭)
+    Delay: 5
+    #字数限制 (-1关闭)
+    MaxLength: 20
     #显示时长
     ShowTime: 15
     #Boss血条颜色
@@ -28,12 +44,6 @@ HornSettings:
 
 #喊话设置
 ShoutSettings:
-  #解析颜色符号
-  Color: true
-  #冷却 (-1关闭)
-  Delay: 5
-  #字数限制 (-1关闭)
-  MaxLength: 20
   #屏蔽词列表
   BlackWordList:
     - "傻逼"

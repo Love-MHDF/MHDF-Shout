@@ -1,5 +1,6 @@
 package cn.chengzhiya.mhdfshout.Listeners;
 
+import cn.chengzhiya.mhdfpluginapi.Util;
 import cn.chengzhiya.mhdfshout.main;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.ChatColor;
@@ -21,9 +22,9 @@ public final class SendShoutMessage implements Listener {
             String Message = ChatColor.stripColor(event.getMessage());
             Player player = event.getPlayer();
             if (!Message.contains(Objects.requireNonNull(main.main.getConfig().getString("InputSettings.ExitMessage")))) {
-                if (main.main.getConfig().getInt("ShoutSettings.MaxLength") != -1 && !event.getPlayer().hasPermission("MHDFShout.Bypass.Length")) {
-                    if (Message.length() > main.main.getConfig().getInt("ShoutSettings.MaxLength")) {
-                        player.sendMessage(i18n("OutLength").replaceAll("\\{Length\\}", String.valueOf(main.main.getConfig().getInt("ShoutSettings.MaxLength"))));
+                if (main.main.getConfig().getInt("HornSettings." + MythicMobsID + ".MaxLength") != -1 && !event.getPlayer().hasPermission("MHDFShout.Bypass.Length")) {
+                    if (Message.length() > main.main.getConfig().getInt("HornSettings." + MythicMobsID + ".MaxLength")) {
+                        player.sendMessage(i18n("OutLength").replaceAll("\\{Length\\}", String.valueOf(main.main.getConfig().getInt("HornSettings." + MythicMobsID + ".MaxLength"))));
                         return;
                     }
                 }
@@ -38,10 +39,14 @@ public final class SendShoutMessage implements Listener {
                 if (main.main.getConfig().getBoolean("HornSettings." + MythicMobsID + ".TakeItem")) {
                     player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount() - 1);
                 }
+                if (main.main.getConfig().getBoolean("HornSettings." + MythicMobsID + ".Color")) {
+                    Message = Util.ChatColor(Message);
+                }
                 player.sendMessage(i18n("Done"));
                 if (!MythicMobsID.equals("AdminShout")) {
                     SendShout(player,
                             main.main.getConfig().getString("HornSettings." + MythicMobsID + ".BossBarColor"),
+                            PlaceholderAPI.setPlaceholders(player, Objects.requireNonNull(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".NullBossBarMessage"))),
                             PlaceholderAPI.setPlaceholders(player, Objects.requireNonNull(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".MessageFormat"))).replaceAll("\\{Message\\}", Message),
                             main.main.getConfig().getString("HornSettings." + MythicMobsID + ".Sound"),
                             main.main.getConfig().getInt("HornSettings." + MythicMobsID + ".ShowTime")
@@ -49,6 +54,7 @@ public final class SendShoutMessage implements Listener {
                 } else {
                     SendAdminShout(player,
                             main.main.getConfig().getString("HornSettings." + MythicMobsID + ".BossBarColor"),
+                            PlaceholderAPI.setPlaceholders(player, Objects.requireNonNull(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".NullBossBarMessage"))),
                             PlaceholderAPI.setPlaceholders(player, Objects.requireNonNull(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".MessageFormat"))).replaceAll("\\{Message\\}", Message),
                             main.main.getConfig().getString("HornSettings." + MythicMobsID + ".Sound"),
                             main.main.getConfig().getInt("HornSettings." + MythicMobsID + ".ShowTime")
