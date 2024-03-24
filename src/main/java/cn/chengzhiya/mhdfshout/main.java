@@ -1,13 +1,15 @@
 package cn.chengzhiya.mhdfshout;
 
+import cn.chengzhiya.mhdfshout.Commands.AdminShout;
 import cn.chengzhiya.mhdfshout.Listeners.*;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 
-import static cn.chengzhiya.mhdfpluginapi.Util.ColorLog;
-import static cn.chengzhiya.mhdfpluginapi.YamlFileUtil.SaveResource;
+import static cn.chengzhiya.mhdfpluginapi.Util.*;
+import static cn.chengzhiya.mhdfpluginapi.YamlFileUtil.*;
+import static cn.chengzhiya.mhdfshout.Util.*;
 
 public final class main extends JavaPlugin {
     public static main main;
@@ -32,6 +34,10 @@ public final class main extends JavaPlugin {
         }
         if (!LangFile.exists()) {
             SaveResource(this.getDataFolder().getPath(), "lang.yml", "lang.yml", true);
+        }
+
+        for (String Commands : getConfig().getStringList("HornSettings.AdminShout.Commands")) {
+            registerCommand(this, new AdminShout(), "管理喊话", Commands);
         }
 
         getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");

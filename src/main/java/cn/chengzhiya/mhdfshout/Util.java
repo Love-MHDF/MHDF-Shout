@@ -20,7 +20,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-import static cn.chengzhiya.mhdfpluginapi.Util.ChatColor;
+import static cn.chengzhiya.mhdfpluginapi.Util.*;
 
 public final class Util {
     @Getter
