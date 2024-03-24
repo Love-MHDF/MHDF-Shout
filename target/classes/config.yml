@@ -1,0 +1,41 @@
+#喇叭设置
+HornSettings:
+  #MythicMobs物品ID
+  超级傻逼之剑:
+    #移除物品
+    TakeItem: true
+    #显示时长
+    ShowTime: 15
+    #Boss血条颜色
+    BossBarColor: YELLOW
+    #文本格式
+    MessageFormat: "&c[全服喊话] &f{Message}"
+    #音效 [<音频>|<音量|<音效>]
+    Sound: "ENTITY_EXPERIENCE_ORB_PICKUP|25|0.9"
+  #管理喊话
+  AdminShout:
+    #显示时长
+    ShowTime: 15
+    #Boss血条颜色
+    BossBarColor: YELLOW
+    #文本格式
+    MessageFormat: "&c[管理全服喊话] &f{Message}"
+    #音效 [<音频>|<音量|<音效>]
+    Sound: "ENTITY_EXPERIENCE_ORB_PICKUP|25|0.9"
+
+#喊话设置
+ShoutSettings:
+  #解析颜色符号
+  Color: true
+  #冷却 (-1关闭)
+  Delay: 5
+  #字数限制 (-1关闭)
+  MaxLength: 20
+  #屏蔽词列表
+  BlackWordList:
+    - "傻逼"
+
+#输入设置
+InputSettings:
+  #退出输入消息
+  ExitMessage: "退出"
