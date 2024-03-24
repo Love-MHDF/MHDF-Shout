@@ -47,7 +47,7 @@ public final class BungeeCordHook implements PluginMessageListener {
                 int ShowTime = in.readInt();
 
                 for (Player OnlinePlayer : Bukkit.getOnlinePlayers()) {
-                    BossBar NullBossBar = BossBar.bossBar(Component.text(ChatColor(Background)), 1f, BossBar.Color.valueOf(Color), BossBar.Overlay.PROGRESS);
+                    BossBar NullBossBar = BossBar.bossBar(Component.text(Background), 1f, BossBar.Color.valueOf(Color), BossBar.Overlay.PROGRESS);
                     BossBar ShoutBossBar = BossBar.bossBar(Component.text(Message), 1f, BossBar.Color.valueOf(Color), BossBar.Overlay.PROGRESS);
 
                     OnlinePlayer.showBossBar(NullBossBar);
@@ -82,7 +82,7 @@ public final class BungeeCordHook implements PluginMessageListener {
         Shout Shout = ShoutList.get(0);
 
         for (Player OnlinePlayer : Bukkit.getOnlinePlayers()) {
-            BossBar NullBossBar = BossBar.bossBar(Component.text(ChatColor(Shout.getBossBarBackground())), 1f, Shout.getBossBarColor(), BossBar.Overlay.PROGRESS);
+            BossBar NullBossBar = BossBar.bossBar(Component.text(Shout.getBossBarBackground()), 1f, Shout.getBossBarColor(), BossBar.Overlay.PROGRESS);
             BossBar ShoutBossBar = BossBar.bossBar(Component.text(Shout.getMessage()), 1f, Shout.getBossBarColor(), BossBar.Overlay.PROGRESS);
 
             OnlinePlayer.showBossBar(NullBossBar);

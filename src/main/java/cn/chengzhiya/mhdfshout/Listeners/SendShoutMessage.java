@@ -46,16 +46,16 @@ public final class SendShoutMessage implements Listener {
                 if (!MythicMobsID.equals("AdminShout")) {
                     SendShout(player,
                             main.main.getConfig().getString("HornSettings." + MythicMobsID + ".BossBarColor"),
-                            PlaceholderAPI.setPlaceholders(player, Objects.requireNonNull(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".NullBossBarMessage"))),
-                            PlaceholderAPI.setPlaceholders(player, Objects.requireNonNull(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".MessageFormat"))).replaceAll("\\{Message\\}", Message),
+                            PlaceholderAPI.setPlaceholders(player, Util.ChatColor(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".NullBossBarMessage"))),
+                            PlaceholderAPI.setPlaceholders(player, Util.ChatColor(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".MessageFormat"))).replaceAll("\\{Message\\}", Message),
                             main.main.getConfig().getString("HornSettings." + MythicMobsID + ".Sound"),
                             main.main.getConfig().getInt("HornSettings." + MythicMobsID + ".ShowTime")
                     );
                 } else {
                     SendAdminShout(player,
                             main.main.getConfig().getString("HornSettings." + MythicMobsID + ".BossBarColor"),
-                            PlaceholderAPI.setPlaceholders(player, Objects.requireNonNull(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".NullBossBarMessage"))),
-                            PlaceholderAPI.setPlaceholders(player, Objects.requireNonNull(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".MessageFormat"))).replaceAll("\\{Message\\}", Message),
+                            PlaceholderAPI.setPlaceholders(player, Util.ChatColor(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".NullBossBarMessage"))),
+                            PlaceholderAPI.setPlaceholders(player, Util.ChatColor(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".MessageFormat"))).replaceAll("\\{Message\\}", Message),
                             main.main.getConfig().getString("HornSettings." + MythicMobsID + ".Sound"),
                             main.main.getConfig().getInt("HornSettings." + MythicMobsID + ".ShowTime")
                     );
