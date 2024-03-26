@@ -46,7 +46,7 @@ public final class SendShoutMessage implements Listener {
                 }
                 if (ShoutList.isEmpty()) {
                     player.sendMessage(i18n("Done"));
-                }else {
+                } else {
                     player.sendMessage(i18n("DoneInQueue").replaceAll("\\{Size\\}", String.valueOf(ShoutList.size())));
                 }
                 if (!MythicMobsID.equals("AdminShout")) {

@@ -2,6 +2,7 @@ cn\chengzhiya\mhdfshout\Listeners\PlayerJoin.class
 cn\chengzhiya\mhdfshout\Listeners\AntiChangeItem.class
 cn\chengzhiya\mhdfshout\Listeners\UseShout.class
 cn\chengzhiya\mhdfshout\main.class
+cn\chengzhiya\mhdfshout\PluginUser.class
 cn\chengzhiya\mhdfshout\Listeners\SendShoutMessage.class
 cn\chengzhiya\mhdfshout\Listeners\QuitCancel.class
 cn\chengzhiya\mhdfshout\Commands\AdminShout.class
