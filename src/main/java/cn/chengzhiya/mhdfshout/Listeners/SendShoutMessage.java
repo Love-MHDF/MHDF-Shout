@@ -25,6 +25,7 @@ public final class SendShoutMessage implements Listener {
                 if (main.main.getConfig().getInt("HornSettings." + MythicMobsID + ".MaxLength") != -1 && !event.getPlayer().hasPermission("MHDFShout.Bypass.Length")) {
                     if (Message.length() > main.main.getConfig().getInt("HornSettings." + MythicMobsID + ".MaxLength")) {
                         player.sendMessage(i18n("OutLength").replaceAll("\\{Length\\}", String.valueOf(main.main.getConfig().getInt("HornSettings." + MythicMobsID + ".MaxLength"))));
+                        getShoutHashMap().remove(player.getName());
                         return;
                     }
                 }
@@ -32,6 +33,7 @@ public final class SendShoutMessage implements Listener {
                     for (String BlackWord : main.main.getConfig().getStringList("ShoutSettings.BlackWordList")) {
                         if (Message.contains(BlackWord)) {
                             player.sendMessage(i18n("BlackWord"));
+                            getShoutHashMap().remove(player.getName());
                             return;
                         }
                     }
@@ -42,20 +44,24 @@ public final class SendShoutMessage implements Listener {
                 if (main.main.getConfig().getBoolean("HornSettings." + MythicMobsID + ".Color")) {
                     Message = Util.ChatColor(Message);
                 }
-                player.sendMessage(i18n("Done"));
+                if (ShoutList.isEmpty()) {
+                    player.sendMessage(i18n("Done"));
+                }else {
+                    player.sendMessage(i18n("DoneInQueue").replaceAll("\\{Size\\}", String.valueOf(ShoutList.size())));
+                }
                 if (!MythicMobsID.equals("AdminShout")) {
                     SendShout(player,
                             main.main.getConfig().getString("HornSettings." + MythicMobsID + ".BossBarColor"),
-                            PlaceholderAPI.setPlaceholders(player, Util.ChatColor(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".NullBossBarMessage"))),
-                            PlaceholderAPI.setPlaceholders(player, Util.ChatColor(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".MessageFormat"))).replaceAll("\\{Message\\}", Message),
+                            Util.ChatColor(PlaceholderAPI.setPlaceholders(player, Objects.requireNonNull(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".NullBossBarMessage")))),
+                            Util.ChatColor(PlaceholderAPI.setPlaceholders(player, Objects.requireNonNull(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".MessageFormat")))).replaceAll("\\{Message\\}", Message),
                             main.main.getConfig().getString("HornSettings." + MythicMobsID + ".Sound"),
                             main.main.getConfig().getInt("HornSettings." + MythicMobsID + ".ShowTime")
                     );
                 } else {
                     SendAdminShout(player,
                             main.main.getConfig().getString("HornSettings." + MythicMobsID + ".BossBarColor"),
-                            PlaceholderAPI.setPlaceholders(player, Util.ChatColor(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".NullBossBarMessage"))),
-                            PlaceholderAPI.setPlaceholders(player, Util.ChatColor(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".MessageFormat"))).replaceAll("\\{Message\\}", Message),
+                            Util.ChatColor(PlaceholderAPI.setPlaceholders(player, Objects.requireNonNull(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".NullBossBarMessage")))),
+                            Util.ChatColor(PlaceholderAPI.setPlaceholders(player, Objects.requireNonNull(main.main.getConfig().getString("HornSettings." + MythicMobsID + ".MessageFormat")))).replaceAll("\\{Message\\}", Message),
                             main.main.getConfig().getString("HornSettings." + MythicMobsID + ".Sound"),
                             main.main.getConfig().getInt("HornSettings." + MythicMobsID + ".ShowTime")
                     );

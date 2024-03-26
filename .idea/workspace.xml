@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f378a66-2399-4243-9a2a-9b756cff5683" name="更改" comment="提交插件" />
+    <list default="true" id="5f378a66-2399-4243-9a2a-9b756cff5683" name="更改" comment="提交插件">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Tasks/ShoutDelayTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Listeners/BungeeCordHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Listeners/BungeeCordHook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Listeners/SendShoutMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Listeners/SendShoutMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lang.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MHDF-Shout-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MHDF-Shout-1.0-shaded.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MHDF-Shout-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MHDF-Shout-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Listeners/BungeeCordHook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Listeners/BungeeCordHook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Listeners/SendShoutMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Listeners/SendShoutMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-MHDF-Shout-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-MHDF-Shout-1.0.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +53,9 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2e5VYLXCQaD5SZ1c6JQ1vRiBbFb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,6 +64,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.sourceCode.Java"

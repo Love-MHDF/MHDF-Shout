@@ -1,10 +1,7 @@
 package cn.chengzhiya.mhdfshout.Listeners;
 
 import cn.chengzhiya.mhdfshout.Shout;
-import cn.chengzhiya.mhdfshout.main;
 import net.kyori.adventure.bossbar.BossBar;
-import net.kyori.adventure.text.Component;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.messaging.PluginMessageListener;
 import org.jetbrains.annotations.NotNull;
@@ -13,7 +10,6 @@ import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.io.IOException;
 
-import static cn.chengzhiya.mhdfpluginapi.Util.*;
 import static cn.chengzhiya.mhdfshout.Util.*;
 
 public final class BungeeCordHook implements PluginMessageListener {
@@ -36,34 +32,17 @@ public final class BungeeCordHook implements PluginMessageListener {
                 ShoutList.add(new Shout(BossBar.Color.valueOf(Color), Background, Message, Sound, ShowTime));
 
                 if (ShoutList.size() == 1) {
-                    SendShout();
+                    StartShout();
                 }
             }
             if (subchannel.equals("SendAdminShout")) {
                 String Color = in.readUTF();
                 String Background = in.readUTF();
                 String Message = in.readUTF();
-                String[] Sound = in.readUTF().split("\\|");
+                String Sound = in.readUTF();
                 int ShowTime = in.readInt();
 
-                for (Player OnlinePlayer : Bukkit.getOnlinePlayers()) {
-                    BossBar NullBossBar = BossBar.bossBar(Component.text(Background), 1f, BossBar.Color.valueOf(Color), BossBar.Overlay.PROGRESS);
-                    BossBar ShoutBossBar = BossBar.bossBar(Component.text(Message), 1f, BossBar.Color.valueOf(Color), BossBar.Overlay.PROGRESS);
-
-                    OnlinePlayer.showBossBar(NullBossBar);
-                    OnlinePlayer.showBossBar(ShoutBossBar);
-
-                    try {
-                        OnlinePlayer.playSound(OnlinePlayer, org.bukkit.Sound.valueOf(Sound[0]), Float.parseFloat(Sound[1]), Float.parseFloat(Sound[2]));
-                    } catch (Exception e) {
-                        OnlinePlayer.playSound(OnlinePlayer, Sound[0], Float.parseFloat(Sound[1]), Float.parseFloat(Sound[2]));
-                    }
-
-                    Bukkit.getScheduler().runTaskLaterAsynchronously(main.main, () -> {
-                        OnlinePlayer.hideBossBar(NullBossBar);
-                        OnlinePlayer.hideBossBar(ShoutBossBar);
-                    }, 20L * ShowTime);
-                }
+                StartAdminShout(new Shout(BossBar.Color.valueOf(Color), Background, Message, Sound, ShowTime));
             }
             if (subchannel.equals("GetDelayTime")) {
                 String PlayerName = in.readUTF();
@@ -76,35 +55,5 @@ public final class BungeeCordHook implements PluginMessageListener {
             }
         } catch (IOException ignored) {
         }
-    }
-
-    public void SendShout() {
-        Shout Shout = ShoutList.get(0);
-
-        for (Player OnlinePlayer : Bukkit.getOnlinePlayers()) {
-            BossBar NullBossBar = BossBar.bossBar(Component.text(Shout.getBossBarBackground()), 1f, Shout.getBossBarColor(), BossBar.Overlay.PROGRESS);
-            BossBar ShoutBossBar = BossBar.bossBar(Component.text(Shout.getMessage()), 1f, Shout.getBossBarColor(), BossBar.Overlay.PROGRESS);
-
-            OnlinePlayer.showBossBar(NullBossBar);
-            OnlinePlayer.showBossBar(ShoutBossBar);
-
-            try {
-                OnlinePlayer.playSound(OnlinePlayer, org.bukkit.Sound.valueOf(Shout.getSound()[0]), Float.parseFloat(Shout.getSound()[1]), Float.parseFloat(Shout.getSound()[2]));
-            } catch (Exception e) {
-                OnlinePlayer.playSound(OnlinePlayer, Shout.getSound()[0], Float.parseFloat(Shout.getSound()[1]), Float.parseFloat(Shout.getSound()[2]));
-            }
-
-            Bukkit.getScheduler().runTaskLaterAsynchronously(main.main, () -> {
-                OnlinePlayer.hideBossBar(NullBossBar);
-                OnlinePlayer.hideBossBar(ShoutBossBar);
-            }, 20L * Shout.getShowTime());
-        }
-
-        Bukkit.getScheduler().runTaskLaterAsynchronously(main.main, () -> {
-            ShoutList.remove(Shout);
-            if (!ShoutList.isEmpty()) {
-                SendShout();
-            }
-        }, 20L * Shout.getShowTime());
     }
 }

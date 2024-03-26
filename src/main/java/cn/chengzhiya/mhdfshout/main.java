@@ -3,6 +3,7 @@ package cn.chengzhiya.mhdfshout;
 import cn.chengzhiya.mhdfshout.Commands.AdminShout;
 import cn.chengzhiya.mhdfshout.Commands.ShoutReload;
 import cn.chengzhiya.mhdfshout.Listeners.*;
+import cn.chengzhiya.mhdfshout.Tasks.ShoutDelayTime;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -37,26 +38,31 @@ public final class main extends JavaPlugin {
             SaveResource(this.getDataFolder().getPath(), "lang.yml", "lang.yml", true);
         }
 
-        for (String Commands : getConfig().getStringList("HornSettings.AdminShout.Commands")) {
-            registerCommand(this, new AdminShout(), "管理喊话", Commands);
+        if (getConfig().getBoolean("BungeeCordMode")) {
+            getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
+            getServer().getMessenger().registerIncomingPluginChannel(this, "BungeeCord", new BungeeCordHook());
+        } else {
+            new ShoutDelayTime().runTaskTimerAsynchronously(this, 0L, 20L);
         }
-
-        registerCommand(this, new ShoutReload(), "重载配置", "shoutreload");
-
-        getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
-        getServer().getMessenger().registerIncomingPluginChannel(this, "BungeeCord", new BungeeCordHook());
 
         Bukkit.getPluginManager().registerEvents(new UseShout(), this);
         Bukkit.getPluginManager().registerEvents(new SendShoutMessage(), this);
         Bukkit.getPluginManager().registerEvents(new AntiChangeItem(), this);
         Bukkit.getPluginManager().registerEvents(new QuitCancel(), this);
         Bukkit.getPluginManager().registerEvents(new PlayerJoin(), this);
+
+        for (String Commands : getConfig().getStringList("HornSettings.AdminShout.Commands")) {
+            registerCommand(this, new AdminShout(), "管理喊话", Commands);
+        }
+
+        registerCommand(this, new ShoutReload(), "重载配置", "shoutreload");
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
         main = null;
+
 
     }
 }

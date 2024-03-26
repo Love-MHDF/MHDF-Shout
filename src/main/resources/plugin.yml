@@ -1,7 +1,7 @@
 name: MHDF-Shout
 version: '${project.version}'
 main: cn.chengzhiya.mhdfshout.main
-depend: [ NBTAPI ]
+depend: [ NBTAPI,MythicMobs ]
 api-version: '1.20'
 permissions:
   MHDFShout.Bypass.Delay:
