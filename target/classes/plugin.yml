@@ -16,6 +16,9 @@ permissions:
   MHDFShout.AdminShout:
     default: op
     description: 管理喊话权限
+  MHDFShout.Reload:
+    default: op
+    description: 重载权限
 libraries:
   - 'com.alibaba:fastjson:1.2.83'
   - 'org.projectlombok:lombok:1.18.32'

@@ -5,26 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f378a66-2399-4243-9a2a-9b756cff5683" name="更改" comment="提交插件">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Tasks/ShoutDelayTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Listeners/BungeeCordHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Listeners/BungeeCordHook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Listeners/SendShoutMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Listeners/SendShoutMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lang.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Commands/ShoutReload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Commands/ShoutReload.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MHDF-Shout-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MHDF-Shout-1.0-shaded.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MHDF-Shout-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MHDF-Shout-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Listeners/BungeeCordHook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Listeners/BungeeCordHook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Listeners/SendShoutMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Listeners/SendShoutMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Commands/ShoutReload.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Commands/ShoutReload.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/original-MHDF-Shout-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-MHDF-Shout-1.0.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,10 +52,19 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/插件源码库/MHDF-Shout/src/main/resources",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.sourceCode.Java"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\插件源码库\MHDF-Shout\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.chengzhiya.mhdfshout" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -103,7 +98,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711288835574</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="提交插件">
+      <option name="closed" value="true" />
+      <created>1711447591428</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711447591428</updated>
+    </task>
+    <task id="LOCAL-00005" summary="提交插件">
+      <option name="closed" value="true" />
+      <created>1711459458815</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711459458815</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
