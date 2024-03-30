@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f378a66-2399-4243-9a2a-9b756cff5683" name="更改" comment="提交插件">
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Commands/ShoutReload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/chengzhiya/mhdfshout/Commands/ShoutReload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MHDF-Shout-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MHDF-Shout-1.0-shaded.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MHDF-Shout-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MHDF-Shout-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Commands/ShoutReload.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/chengzhiya/mhdfshout/Commands/ShoutReload.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-MHDF-Shout-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-MHDF-Shout-1.0.jar" afterDir="false" />
-    </list>
+    <list default="true" id="5f378a66-2399-4243-9a2a-9b756cff5683" name="更改" comment="提交插件" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,17 +38,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/插件源码库/MHDF-Shout/src/main/resources",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/插件源码库/MHDF-Shout/src/main/resources&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\插件源码库\MHDF-Shout\src\main\resources" />
@@ -114,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711459458815</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="提交插件">
+      <option name="closed" value="true" />
+      <created>1711708067354</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711708067354</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
