@@ -4,7 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f378a66-2399-4243-9a2a-9b756cff5683" name="更改" comment="提交插件" />
+    <list default="true" id="5f378a66-2399-4243-9a2a-9b756cff5683" name="更改" comment="提交插件">
+      <change afterPath="$PROJECT_DIR$/MHDF-Shout-API/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MHDF-Shout-API/src/main/java/cn/chengzhiya/mhdfshoutapi/entity/Shout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MHDF-Shout-BungeecordHook/src/main/java/cn/chengzhiya/mhdfshoutbungeecordhook/listener/PluginMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MHDF-Shout-BungeecordHook/src/main/java/cn/chengzhiya/mhdfshoutbungeecordhook/task/TakeShoutDelay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MHDF-Shout-BungeecordHook/src/main/java/cn/chengzhiya/mhdfshoutbungeecordhook/util/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/listener/PluginMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/task/TakeShoutDelay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/util/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout-BungeecordHook/MHDF-Shout-BungeecordHook.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout-BungeecordHook/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MHDF-Shout-BungeecordHook/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout-BungeecordHook/src/main/java/cn/chengzhiya/mhdfshoutbungeecordhook/Listeners/PluginMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout-BungeecordHook/src/main/java/cn/chengzhiya/mhdfshoutbungeecordhook/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/MHDF-Shout-BungeecordHook/src/main/java/cn/chengzhiya/mhdfshoutbungeecordhook/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/MHDF-Shout.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MHDF-Shout/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/Commands/AdminShout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/Commands/ShoutReload.java" beforeDir="false" afterPath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/command/ShoutReload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/Listeners/AntiChangeItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/Listeners/BungeeCordHook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/Listeners/PlayerJoin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/Listeners/QuitCancel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/Listeners/SendShoutMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/Listeners/UseShout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/PluginUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/Shout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/Tasks/ShoutDelayTime.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/resources/QAQ.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MHDF-Shout/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/resources/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MHDF-Shout/src/main/resources/lang.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MHDF-Shout/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,18 +60,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "BaiShenYaoDog"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;BaiShenYaoDog&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Love-MHDF/MHDF-Shout.git",
-    "accountId": "77128032-e10b-4ce7-ab9c-6ba47285fc78"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Love-MHDF/MHDF-Shout.git&quot;,
+    &quot;accountId&quot;: &quot;77128032-e10b-4ce7-ab9c-6ba47285fc78&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -52,29 +92,75 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.MHDF-ShoutPlugins [package].executor": "Run",
+    "Maven.MHDF-ShoutPlugins [test].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.com.intellij.ui.dsl.builder.impl.RowImpl.sdk": "jbr-17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/插件源码库/MHDF-ShoutPlugins",
+    "last_opened_file_path": "D:/Projects/MHDF-Shout/MHDF-Shout-BungeecordHook/src/main/java/cn/chengzhiya/mhdfshoutbungeecordhook",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.53103447",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.sourceCode.Java",
-    "vue.rearranger.settings.migration": "true"
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.main.executor": "Run"
+  },
+  "keyToStringList": {
+    "jdk.preference.com.intellij.ui.dsl.builder.impl.RowImpl.sdk": [
+      "17=C:/Users/ChengZhiYa/.jdks/jbrsdk-17.0.9"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\MHDF-Shout\MHDF-Shout-BungeecordHook\src\main\java\cn\chengzhiya\mhdfshoutbungeecordhook" />
       <recent name="D:\插件源码库\MHDF-Shout\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.chengzhiya.mhdfshout" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MHDF-ShoutPlugins [package]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="package" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -93,6 +179,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711194473062</updated>
       <workItem from="1713364335832" duration="665000" />
+      <workItem from="1715516281190" duration="11240000" />
     </task>
     <task id="LOCAL-00001" summary="提交插件">
       <option name="closed" value="true" />

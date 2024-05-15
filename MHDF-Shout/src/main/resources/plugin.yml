@@ -1,7 +1,6 @@
 name: MHDF-Shout
 version: '${project.version}'
 main: cn.chengzhiya.mhdfshout.main
-depend: [ NBTAPI,MythicMobs ]
 api-version: '1.20'
 permissions:
   MHDFShout.Bypass.Delay:
@@ -13,10 +12,7 @@ permissions:
   MHDFShout.Bypass.BlackWord:
     default: op
     description: 绕过屏蔽词
-  MHDFShout.AdminShout:
-    default: op
-    description: 管理喊话权限
-  MHDFShout.Reload:
+  MHDFShout.Commands.Reload:
     default: op
     description: 重载权限
 libraries:

@@ -14,5 +14,6 @@
     <modules>
         <module>MHDF-Shout</module>
         <module>MHDF-Shout-BungeecordHook</module>
+        <module>MHDF-Shout-API</module>
     </modules>
 </project>

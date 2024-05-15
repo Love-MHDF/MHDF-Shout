@@ -1,25 +1,21 @@
-#验证设置
-SignSettings:
-  #账户
-  Username: "123456"
-  #密码
-  Password: "123456"
-
 #群组模式
 BungeeCordMode: false
 
 #喇叭设置
 HornSettings:
-  #MythicMobs物品ID
+  #自定义名称
   普通喇叭:
-    #移除物品
-    TakeItem: true
+    #命令列表
+    Commands:
+      - "shout"
+    #权限
+    Permission: "MHDFShout.Shout.DefaultShout"
+    #队列系统（等待上一个喇叭消失后显示新喇叭）
+    Wait: true
     #解析颜色符号
     Color: true
     #喊话背景贴图
     NullBossBarMessage: "뛣"
-    #冷却 (-1关闭)
-    Delay: 5
     #字数限制 (-1关闭)
     MaxLength: 20
     #显示时长
@@ -30,99 +26,21 @@ HornSettings:
     MessageFormat: "&f뢆 &f%luckperms_prefix% %player_name% &f{Message}"
     #音效 [<音频>|<音量|<音效>]
     Sound: "ENTITY_WOLF_AMBIENT|25|0.9"
-  #MythicMobs物品ID
-  胡桃喇叭:
-    #移除物品
-    TakeItem: true
-    #解析颜色符号
-    Color: true
-    #喊话背景贴图
-    NullBossBarMessage: "륣"
-    #冷却 (-1关闭)
-    Delay: 5
-    #字数限制 (-1关闭)
-    MaxLength: 20
-    #显示时长
-    ShowTime: 15
-    #Boss血条颜色
-    BossBarColor: YELLOW
-    #文本格式
-    MessageFormat: "&f뢆 &f%luckperms_prefix% %player_name% &f{Message}"
-    #音效 [<音频>|<音量|<音效>]
-    Sound: "ENTITY_VILLAGER_AMBIENT|25|0.9"
-  #MythicMobs物品ID
-  兔子喇叭:
-    #移除物品
-    TakeItem: true
-    #解析颜色符号
-    Color: true
-    #喊话背景贴图
-    NullBossBarMessage: "뜄"
-    #冷却 (-1关闭)
-    Delay: 5
-    #字数限制 (-1关闭)
-    MaxLength: 20
-    #显示时长
-    ShowTime: 15
-    #Boss血条颜色
-    BossBarColor: YELLOW
-    #文本格式
-    MessageFormat: "&f뢆 &f%luckperms_prefix% %player_name% &f{Message}"
-    #音效 [<音频>|<音量|<音效>]
-    Sound: "ENTITY_RABBIT_DEATH|25|0.9"
-  #MythicMobs物品ID
-  蛋蛋喇叭:
-    #移除物品
-    TakeItem: true
-    #解析颜色符号
-    Color: true
-    #喊话背景贴图
-    NullBossBarMessage: "냊"
-    #冷却 (-1关闭)
-    Delay: 5
-    #字数限制 (-1关闭)
-    MaxLength: 20
-    #显示时长
-    ShowTime: 15
-    #Boss血条颜色
-    BossBarColor: YELLOW
-    #文本格式
-    MessageFormat: "&f뢆 &f%luckperms_prefix% %player_name% &f{Message}"
-    #音效 [<音频>|<音量|<音效>]
-    Sound: "ENTITY_CHICKEN_EGG|25|0.9"
-  #MythicMobs物品ID
-  凋零玫瑰喇叭:
-    #移除物品
-    TakeItem: true
-    #解析颜色符号
-    Color: true
-    #喊话背景贴图
-    NullBossBarMessage: "냁"
-    #冷却 (-1关闭)
-    Delay: 5
-    #字数限制 (-1关闭)
-    MaxLength: 20
-    #显示时长
-    ShowTime: 15
-    #Boss血条颜色
-    BossBarColor: YELLOW
-    #文本格式
-    MessageFormat: "&f뢆 &f%luckperms_prefix% %player_name% &f{Message}"
-    #音效 [<音频>|<音量|<音效>]
-    Sound: "ENTITY_WITHER_AMBIENT|25|0.9"
-  #管理喊话
-  AdminShout:
+  #自定义名称
+  管理喊话:
     #命令
     Commands:
       - "adminshout"
+    #权限
+    Permission: "MHDFShout.Shout.AdminShout"
+    #队列系统（等待上一个喇叭消失后显示新喇叭）
+    Wait: false
     #解析颜色符号
     Color: true
     #喊话背景贴图
     NullBossBarMessage: "륣"
-    #冷却 (-1关闭)
-    Delay: 5
     #字数限制 (-1关闭)
-    MaxLength: 20
+    MaxLength: -1
     #显示时长
     ShowTime: 15
     #Boss血条颜色
@@ -134,11 +52,8 @@ HornSettings:
 
 #喊话设置
 ShoutSettings:
+  #冷却 (-1关闭)
+  Delay: 5
   #屏蔽词列表
   BlackWordList:
     - "傻逼"
-
-#输入设置
-InputSettings:
-  #退出输入消息
-  ExitMessage: "退出"
