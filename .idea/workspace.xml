@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f378a66-2399-4243-9a2a-9b756cff5683" name="更改" comment="提交插件">
-      <change afterPath="$PROJECT_DIR$/MHDF-Shout-BungeecordHook/src/main/java/cn/chengzhiya/mhdfshoutbungeecordhook/entity/Shout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHDF-Shout-API/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHDF-Shout-API/src/main/java/cn/chengzhiya/mhdfshoutapi/entity/Shout.java" beforeDir="false" afterPath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/entity/Shout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHDF-Shout-API/target/MHDF-Shout-API-1.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHDF-Shout-API/target/classes/cn/chengzhiya/mhdfshoutapi/entity/Shout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHDF-Shout-API/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHDF-Shout-API/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHDF-Shout-API/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHDF-Shout-BungeecordHook/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MHDF-Shout-BungeecordHook/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHDF-Shout/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MHDF-Shout/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/listener/PluginMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/listener/PluginMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/MHDF-Shout/src/main/java/cn/chengzhiya/mhdfshout/util/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MHDF-Shout/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MHDF-Shout/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711194473062</updated>
       <workItem from="1713364335832" duration="665000" />
-      <workItem from="1715778653977" duration="771000" />
+      <workItem from="1715778653977" duration="1917000" />
     </task>
     <task id="LOCAL-00001" summary="提交插件">
       <option name="closed" value="true" />
@@ -192,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712490800083</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="提交插件">
+      <option name="closed" value="true" />
+      <created>1715779633035</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715779633035</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
