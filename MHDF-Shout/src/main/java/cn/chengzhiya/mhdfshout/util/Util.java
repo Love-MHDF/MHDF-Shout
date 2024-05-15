@@ -1,12 +1,13 @@
 package cn.chengzhiya.mhdfshout.util;
 
+import cn.chengzhiya.mhdfshout.entity.Shout;
 import cn.chengzhiya.mhdfshout.main;
-import cn.chengzhiya.mhdfshoutapi.entity.Shout;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
 import lombok.Getter;
 import net.kyori.adventure.bossbar.BossBar;
+import net.kyori.adventure.sound.Sound;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
@@ -110,19 +111,19 @@ public final class Util {
             BossBar NullBossBar = BossBar.bossBar(Component.text(shout.getBossBarBackground()), 1f, BossBar.Color.valueOf(shout.getBossBarColor()), BossBar.Overlay.PROGRESS);
             BossBar ShoutBossBar = BossBar.bossBar(Component.text(shout.getMessage()), 1f, BossBar.Color.valueOf(shout.getBossBarColor()), BossBar.Overlay.PROGRESS);
 
-            onlinePlayer.showBossBar(NullBossBar);
-            onlinePlayer.showBossBar(ShoutBossBar);
+            main.adventure().player(onlinePlayer).showBossBar(NullBossBar);
+            main.adventure().player(onlinePlayer).showBossBar(ShoutBossBar);
 
             String[] sound = shout.getSound().split("\\|");
             try {
-                onlinePlayer.playSound(onlinePlayer, org.bukkit.Sound.valueOf(sound[0]), Float.parseFloat(sound[1]), Float.parseFloat(sound[2]));
+                onlinePlayer.playSound(onlinePlayer.getLocation(), org.bukkit.Sound.valueOf(sound[0]), Float.parseFloat(sound[1]), Float.parseFloat(sound[2]));
             } catch (Exception e) {
-                onlinePlayer.playSound(onlinePlayer, sound[0], Float.parseFloat(sound[1]), Float.parseFloat(sound[2]));
+                onlinePlayer.playSound(onlinePlayer.getLocation(), sound[0], Float.parseFloat(sound[1]), Float.parseFloat(sound[2]));
             }
 
             Bukkit.getScheduler().runTaskLaterAsynchronously(main.main, () -> {
-                onlinePlayer.hideBossBar(NullBossBar);
-                onlinePlayer.hideBossBar(ShoutBossBar);
+                main.adventure().player(onlinePlayer).hideBossBar(NullBossBar);
+                main.adventure().player(onlinePlayer).hideBossBar(ShoutBossBar);
             }, 20L * shout.getShowTime());
         }
     }

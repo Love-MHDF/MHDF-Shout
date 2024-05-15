@@ -1,11 +1,12 @@
 package cn.chengzhiya.mhdfshout;
 
 import cn.chengzhiya.mhdfshout.command.ShoutReload;
+import cn.chengzhiya.mhdfshout.entity.Shout;
 import cn.chengzhiya.mhdfshout.listener.PluginMessage;
 import cn.chengzhiya.mhdfshout.task.TakeShoutDelay;
 import cn.chengzhiya.mhdfshout.util.Util;
-import cn.chengzhiya.mhdfshoutapi.entity.Shout;
 import me.clip.placeholderapi.PlaceholderAPI;
+import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -19,12 +20,20 @@ import static cn.chengzhiya.mhdfshout.util.Util.*;
 
 public final class main extends JavaPlugin {
     public static main main;
-    public static String Version = "1.0.1";
+    public static BukkitAudiences adventure;
+
+    public static BukkitAudiences adventure() {
+        if (adventure == null) {
+            throw new IllegalStateException("Tried to access Adventure when the plugin was disabled!");
+        }
+        return adventure;
+    }
 
     @Override
     public void onEnable() {
         // Plugin startup logic
         main = this;
+        adventure = BukkitAudiences.create(this);
 
         File PluginHome = getDataFolder();
         File ConfigFile = new File(PluginHome, "config.yml");
@@ -140,6 +149,10 @@ public final class main extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
         main = null;
+        if (adventure != null) {
+            adventure.close();
+            adventure = null;
+        }
 
         ColorLog("&f[MHDF-Shout] &d  __  __ _    _ _____  ______    _____ _                 _   ");
         ColorLog("&f[MHDF-Shout] &d |  \\/  | |  | |  __ \\|  ____|  / ____| |               | |  ");

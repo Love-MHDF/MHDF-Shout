@@ -1,4 +1,4 @@
-package cn.chengzhiya.mhdfshoutapi.entity;
+package cn.chengzhiya.mhdfshoutbungeecordhook.entity;
 
 import lombok.Data;
 

@@ -1,7 +1,7 @@
 package cn.chengzhiya.mhdfshout.listener;
 
+import cn.chengzhiya.mhdfshout.entity.Shout;
 import cn.chengzhiya.mhdfshout.util.Util;
-import cn.chengzhiya.mhdfshoutapi.entity.Shout;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.bukkit.entity.Player;
