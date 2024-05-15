@@ -78,12 +78,14 @@ public final class PluginMessage implements Listener {
                         break;
                     }
                     case "getDelay": {
+                        String player = data.getJSONObject("params").getString("player");
+
                         JSONObject sendData = new JSONObject();
-                        sendData.put("action", "sendShout");
+                        sendData.put("action", "getDelay");
 
                         JSONObject params = new JSONObject();
-                        params.put("player", data.getJSONObject("params").getString("player"));
-                        params.put("delay", Util.getShoutDelayHashMap().get(data.getJSONObject("params").getString("player")));
+                        params.put("player", player);
+                        params.put("delay", Util.getShoutDelayHashMap().get(player) != null ? Util.getShoutDelayHashMap().get(player) : -1);
                         sendData.put("params", params);
 
                         sendMessage(sendData.toJSONString(), event);

@@ -8,8 +8,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
 
-import static cn.chengzhiya.mhdfshoutbungeecordhook.util.Util.*;
-
 public final class main extends Plugin {
     private static final Logger log = LoggerFactory.getLogger(main.class);
     public static main main;
@@ -18,9 +16,6 @@ public final class main extends Plugin {
     public void onEnable() {
         // Plugin startup logic
         main = this;
-
-        saveConfig();
-        reloadConfig();
 
         getProxy().getPluginManager().registerListener(this, new PluginMessage());
         getProxy().registerChannel("BungeeCord");

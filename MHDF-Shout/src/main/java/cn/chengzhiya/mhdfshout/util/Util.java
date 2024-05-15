@@ -113,10 +113,11 @@ public final class Util {
             onlinePlayer.showBossBar(NullBossBar);
             onlinePlayer.showBossBar(ShoutBossBar);
 
+            String[] sound = shout.getSound().split("\\|");
             try {
-                onlinePlayer.playSound(onlinePlayer, org.bukkit.Sound.valueOf(shout.getSound()[0]), Float.parseFloat(shout.getSound()[1]), Float.parseFloat(shout.getSound()[2]));
+                onlinePlayer.playSound(onlinePlayer, org.bukkit.Sound.valueOf(sound[0]), Float.parseFloat(sound[1]), Float.parseFloat(sound[2]));
             } catch (Exception e) {
-                onlinePlayer.playSound(onlinePlayer, shout.getSound()[0], Float.parseFloat(shout.getSound()[1]), Float.parseFloat(shout.getSound()[2]));
+                onlinePlayer.playSound(onlinePlayer, sound[0], Float.parseFloat(sound[1]), Float.parseFloat(sound[2]));
             }
 
             Bukkit.getScheduler().runTaskLaterAsynchronously(main.main, () -> {
@@ -176,6 +177,7 @@ public final class Util {
         out.writeUTF("MHDFShout");
         out.writeUTF(data);
 
+        System.out.println(data);
         Bukkit.getServer().sendPluginMessage(main.main, "BungeeCord", out.toByteArray());
     }
 }

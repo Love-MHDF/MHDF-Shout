@@ -28,7 +28,6 @@ public final class PluginMessage implements PluginMessageListener {
             String subchannel = in.readUTF();
             if (subchannel.equals("MHDFShout")) {
                 JSONObject data = JSON.parseObject(in.readUTF());
-                System.out.println(data);
                 switch (data.getString("action")) {
                     case "sendShout":
                         String shoutType = data.getJSONObject("params").getString("shoutType");
@@ -51,7 +50,11 @@ public final class PluginMessage implements PluginMessageListener {
                         }
                         break;
                     case "getDelay":
-                        Util.getShoutDelayHashMap().put(data.getJSONObject("params").getString("player"), data.getJSONObject("params").getIntValue("delay"));
+                        if (data.getJSONObject("params").getIntValue("delay") != -1) {
+                            Util.getShoutDelayHashMap().put(data.getJSONObject("params").getString("player"), data.getJSONObject("params").getIntValue("delay"));
+                        } else {
+                            Util.getShoutDelayHashMap().remove(data.getJSONObject("params").getString("player"));
+                        }
                         break;
                 }
             }

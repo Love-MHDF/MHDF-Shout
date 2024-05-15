@@ -49,8 +49,10 @@ public final class main extends JavaPlugin {
             CommandExecutor commandExecutor = (sender, command, label, args) -> {
                 if (sender.hasPermission(Objects.requireNonNull(getConfig().getString("HornSettings." + shouts + ".Permission")))) {
                     if (Util.getShoutDelayHashMap().get(sender.getName()) != null && !sender.hasPermission("MHDFShout.Bypass.Delay")) {
-                        sender.sendMessage(i18n("Delay").replaceAll("\\{Delay}", String.valueOf(Util.getShoutDelayHashMap().get(sender.getName()))));
-                        return false;
+                        if (Util.getShoutDelayHashMap().get(sender.getName()) != -1) {
+                            sender.sendMessage(i18n("Delay").replaceAll("\\{Delay}", String.valueOf(Util.getShoutDelayHashMap().get(sender.getName()))));
+                            return false;
+                        }
                     }
                     if (args.length != 0) {
                         StringBuilder shoutMessageBuilder = new StringBuilder();
@@ -91,7 +93,9 @@ public final class main extends JavaPlugin {
                                 getConfig().getInt("HornSettings." + shouts + ".ShowTime")
                         );
 
-                        setDelay(sender.toString(), getConfig().getInt("ShoutSettings.BlackWordList"));
+                        if (!sender.hasPermission("MHDFShout.Bypass.Delay")) {
+                            setDelay(sender.getName(), getConfig().getInt("ShoutSettings.Delay"));
+                        }
 
                         if (getConfig().getBoolean("HornSettings." + shouts + ".Wait") && Util.getShoutWaitHashMap().get(shouts) != null && !Util.getShoutWaitHashMap().get(shouts).isEmpty()) {
                             sender.sendMessage(i18n("DoneInQueue").replaceAll("\\{Size}", String.valueOf(Util.getShoutWaitHashMap().get(shouts).size())));
