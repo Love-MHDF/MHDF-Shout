@@ -7,7 +7,6 @@ import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
 import lombok.Getter;
 import net.kyori.adventure.bossbar.BossBar;
-import net.kyori.adventure.sound.Sound;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
@@ -178,7 +177,9 @@ public final class Util {
         out.writeUTF("MHDFShout");
         out.writeUTF(data);
 
-        System.out.println(data);
-        Bukkit.getServer().sendPluginMessage(main.main, "BungeeCord", out.toByteArray());
+        for (Player player : Bukkit.getOnlinePlayers()) {
+            player.sendPluginMessage(main.main, "BungeeCord", out.toByteArray());
+            break;
+        }
     }
 }
